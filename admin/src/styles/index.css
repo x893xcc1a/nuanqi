@@ -1,0 +1,153 @@
+/* 暖栖港湾后台 - 全局样式 */
+
+:root {
+  --el-color-primary: #000000;
+  --el-color-primary-light-3: #333333;
+  --el-color-primary-light-5: #666666;
+  --el-color-primary-light-7: #999999;
+  --el-color-primary-light-8: #CCCCCC;
+  --el-color-primary-light-9: #F5F5F5;
+  --el-color-primary-dark-2: #000000;
+  
+  --sidebar-width: 220px;
+  --header-height: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  background-color: #F5F5F5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 布局 */
+.admin-layout {
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  background: #000000;
+  color: #FFFFFF;
+  z-index: 100;
+}
+
+.admin-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: var(--sidebar-width);
+  height: var(--header-height);
+  background: #FFFFFF;
+  border-bottom: 1px solid #EEEEEE;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 99;
+}
+
+.admin-main {
+  margin-left: var(--sidebar-width);
+  margin-top: var(--header-height);
+  padding: 24px;
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* 卡片 */
+.stat-card {
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 8px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #999999;
+}
+
+/* 表格 */
+.el-table {
+  --el-table-border-color: #EEEEEE;
+  --el-table-header-bg-color: #FAFAFA;
+  --el-table-row-hover-bg-color: #F5F5F5;
+}
+
+.el-table th {
+  font-weight: 600;
+  color: #333333;
+}
+
+/* 按钮 */
+.el-button--primary {
+  --el-button-bg-color: #000000;
+  --el-button-border-color: #000000;
+  --el-button-hover-bg-color: #333333;
+  --el-button-hover-border-color: #333333;
+}
+
+/* 分页 */
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: #000000;
+}
+
+/* 菜单 */
+.el-menu {
+  border-right: none;
+  background: transparent;
+}
+
+.el-menu-item {
+  color: #999999;
+}
+
+.el-menu-item:hover,
+.el-menu-item.is-active {
+  color: #FFFFFF;
+  background: #333333;
+}
+
+/* 表单 */
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px #000000 inset;
+}
+
+.el-textarea__inner:focus {
+  box-shadow: 0 0 0 1px #000000 inset;
+}
+
+/* 标签 */
+.el-tag {
+  border-radius: 2px;
+}
+
+/* 对话框 */
+.el-dialog {
+  border-radius: 2px;
+}
+
+/* 消息提示 */
+.el-message--success {
+  --el-message-bg-color: #000000;
+  --el-message-text-color: #FFFFFF;
+  --el-message-border-color: #000000;
+}

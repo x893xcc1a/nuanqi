@@ -1,0 +1,272 @@
+/* 暖栖港湾 - 全局样式 */
+
+/* CSS变量定义 */
+:root {
+  --color-bg: #FFFFFF;
+  --color-bg-gray: #FAFAFA;
+  --color-text: #000000;
+  --color-text-secondary: #333333;
+  --color-text-auxiliary: #999999;
+  --color-border: #EEEEEE;
+  --color-accent: #000000;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 【微信H5专用】禁止文本选择，提升原生感 */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 允许输入框选择 */
+input, textarea {
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+
+/* 页面容器 */
+.page-container {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 内容区域 */
+.content-wrapper {
+  padding: 16px;
+}
+
+/* 卡片样式 - 极简 */
+.card {
+  background: #FFFFFF;
+  border: 0.5px solid var(--color-border);
+  border-radius: 2px;
+  padding: 16px;
+}
+
+/* 标题样式 */
+.title-lg {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.title-md {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.title-sm {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* 正文样式 */
+.text-primary {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.text-auxiliary {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--color-text-auxiliary);
+}
+
+/* 分割线 */
+.divider {
+  height: 0.5px;
+  background-color: var(--color-border);
+  margin: 16px 0;
+}
+
+/* 按钮样式 - 黑白极简 */
+.btn-primary {
+  width: 100%;
+  height: 44px;
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:active {
+  opacity: 0.8;
+}
+
+.btn-outline {
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  color: #000000;
+  border: 0.5px solid #000000;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 0.5px solid var(--color-border);
+  border-radius: 2px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  background: transparent;
+}
+
+/* 安全区域适配 */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 【微信H5专用】隐藏滚动条但保留滚动功能 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 页面切换动画 - 极简淡入 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 100ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 列表样式重置 */
+ul, ol {
+  list-style: none;
+}
+
+/* 图片样式 */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* 输入框样式 */
+input::placeholder,
+textarea::placeholder {
+  color: #CCCCCC;
+  font-weight: 300;
+}
+
+/* Vant主题覆盖 - 黑白极简 */
+.van-nav-bar {
+  background-color: #FFFFFF !important;
+}
+
+.van-nav-bar__title {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+.van-tabbar {
+  background-color: #FFFFFF !important;
+  border-top: 0.5px solid #EEEEEE !important;
+}
+
+.van-tabbar-item--active {
+  color: #000000 !important;
+}
+
+.van-tabbar-item {
+  color: #999999 !important;
+}
+
+.van-button--primary {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.van-button--default {
+  border-color: #EEEEEE !important;
+  color: #333333 !important;
+}
+
+.van-cell {
+  font-size: 14px !important;
+  color: #333333 !important;
+}
+
+.van-cell::after {
+  border-bottom: 0.5px solid #EEEEEE !important;
+}
+
+.van-field__label {
+  color: #000000 !important;
+  font-weight: 500 !important;
+}
+
+.van-tag--default {
+  background-color: transparent !important;
+  border: 0.5px solid #EEEEEE !important;
+  color: #666666 !important;
+}
+
+.van-empty__description {
+  color: #999999 !important;
+  font-weight: 300 !important;
+}
+
+.van-skeleton {
+  padding: 0 !important;
+}
+
+.van-loading__text {
+  color: #999999 !important;
+  font-weight: 300 !important;
+}
+
+.van-divider {
+  border-color: #EEEEEE !important;
+}
+
+.van-popup {
+  background-color: #FFFFFF !important;
+}
+
+.van-action-sheet__item {
+  color: #333333 !important;
+}
+
+.van-share-sheet__option-name {
+  color: #666666 !important;
+}

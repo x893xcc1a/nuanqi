@@ -1,0 +1,33 @@
+import request from './request';
+
+/**
+ * 上传单张图片
+ * @param {File} file - 图片文件
+ */
+export function uploadImage(file) {
+  const formData = new FormData();
+  formData.append('file', file);
+  
+  return request.post('/upload/image', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
+}
+
+/**
+ * 批量上传图片
+ * @param {File[]} files - 图片文件数组
+ */
+export function uploadImages(files) {
+  const formData = new FormData();
+  files.forEach(file => {
+    formData.append('files', file);
+  });
+  
+  return request.post('/upload/images', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
+}
